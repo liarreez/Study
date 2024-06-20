@@ -4,6 +4,8 @@
 
 > 자바에서 가비지 컬렉터가 메모리를 자동으로 관리해주지만 메모리 관리에 전혀 신경 쓰지 않아도 되는 것은 아님
 
+강한 참조를 하고 있는 상태라면 가비지 컬렉터는 메모리에서 자동으로 객체를 제거하지 않음
+
 <br>
 
 ## 메모리 누수 원인
@@ -49,13 +51,25 @@ public class Main {
     public static void main(String[] args) {
         List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7);
         for (int index = 0; index < iterateSize; index++) {
-            Syste거
-        listener = null;
-
-        System.out.println("Listener registered and eligible for GC.");
+         System.out.println(list.get(index));
+        }
     }
 }
 ```
+<br>
+유효 범위를 좁게 하여 반복 후에 iterateSize 변수가 제거되도록 함
+```java
+public class Main {
+    public static void main(String[] args) {
+        int iterateSize = 3;
+        List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7);
+        for (int index = 0; index < iterateSize; index++) {
+         System.out.println(list.get(index));
+        }
+    }
+}
+```
+
 
 <br>
 
