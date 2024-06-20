@@ -36,11 +36,11 @@ public class IntegerList {
 <br>
 
 ---
-### 해결 방안
+#### 해결 방안
 
 <br>
 
- #### 참조를 담은 변수를 유효 범위 밖으로 밀어 냄
+ ##### 참조를 담은 변수를 유효 범위 밖으로 밀어 냄
 
 유효 범위를 너무 넓게 잡아서 반복 후에도 iterateSize 변수가 메모리에 남음
  ```java
@@ -59,7 +59,7 @@ public class Main {
 
 <br>
 
- #### 참조를 다 썼을 때 null 처리
+ ##### 참조를 다 썼을 때 null 처리
 
  ```java
 public class IntegerList {
@@ -160,7 +160,7 @@ public class MemoryLeakExample {
 
 <br>
 
-#### 해결방법 : 약한 참조로 저장하여 가비지 컬렉터가 자동으로 제거
+#### 해결 방 : 약한 참조로 저장하여 가비지 컬렉터가 자동으로 제거
 ```java
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
