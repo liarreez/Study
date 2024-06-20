@@ -56,7 +56,9 @@ public class Main {
     }
 }
 ```
+
 <br>
+
 유효 범위를 좁게 하여 반복 후에 iterateSize 변수가 제거되도록 함
 ```java
 public class Main {
