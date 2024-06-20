@@ -160,7 +160,7 @@ public class MemoryLeakExample {
 
 <br>
 
-#### 해결 방 : 약한 참조로 저장하여 가비지 컬렉터가 자동으로 제거
+#### 해결 방안 : 약한 참조로 저장하여 가비지 컬렉터가 자동으로 제거
 ```java
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
