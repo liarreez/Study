@@ -51,6 +51,8 @@ public class Person {
 - toString이 반환한 값에 정보를 얻어올 수 있는 API를 제공(getter)
   * 접근자를 제공하지 않으면 toString의 반환값을 파싱해야하므로 비효율적
 
+<br>
+
 ## toString 재정의가 불필요한 경우
  - 정적 유틸리티 클래스(Math) : 사용 안함
  - 열거 타입(Enum) : 이미 제공
