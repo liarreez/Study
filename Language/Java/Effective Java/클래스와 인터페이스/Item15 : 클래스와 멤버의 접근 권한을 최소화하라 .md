@@ -39,12 +39,15 @@
  - 클래스가 표현하는 추상 개념을 완성하는 데 꼭 필요한 구성요소써의 상수라면 public static final로 공개 가능
    * 기본 타입 값이나 불변 객체를 참조해야 함
    * 가변 객체는 참조된 객체를 수정하는 방법으로 수정 될 수 있음
-     가변 객체 사용 방법
      ```java
+        //가변 객체 사용 방법
+     
         private static final Thing[] PRIIVATE_VALUES = {...};
+     
         // public 불변 리스트 사용
         public static final List<Thing> VALUES =
                 Collections.unmodifiableList((Arrays.asList(PRIIVATE_VALUES)));
+     
         // 복사본을 반환하는 public 메서드 추
         public static final Thing[] values() {
             return PRIIVATE_VALUES.clone();
