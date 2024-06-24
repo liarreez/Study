@@ -18,7 +18,7 @@
 
 <br>
 
-전화번호 객체
+사람 객체
 ```java
 class Person {
     private int id;
