@@ -47,6 +47,12 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
 public class ForwardingSet<E> implements Set<E> {
     private final Set<E> s;
     public ForwardingSet(Set<E> s) {this.s = s;}
+
+    @Override
+    public boolean add(E e) {retunr s.add(e);}
+
+    @Override
+    public boolean addAll(Collection<? extends E> c) {retunr s.addAll(c);}
 }
 
 import java.util.Collection;
