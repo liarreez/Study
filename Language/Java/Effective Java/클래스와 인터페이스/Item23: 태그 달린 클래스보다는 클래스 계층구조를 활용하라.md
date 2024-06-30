@@ -7,7 +7,7 @@
 ---
 
 ```java
-public class Shape {
+class Shape {
     enum ShapeType { CIRCLE, RECTANGLE }
 
     // 태그 필드
@@ -72,12 +72,12 @@ public class Shape {
 
 ```java
 // 상위 클래스 또는 인터페이스
-public abstract class Shape {
+abstract class Shape {
     public abstract double area();
 }
 
 // Circle 클래스
-public class Circle extends Shape {
+class Circle extends Shape {
     private final double radius;
 
     public Circle(double radius) {
@@ -91,7 +91,7 @@ public class Circle extends Shape {
 }
 
 // Rectangle 클래스
-public class Rectangle extends Shape {
+class Rectangle extends Shape {
     private final double length;
     private final double width;
 
@@ -106,6 +106,13 @@ public class Rectangle extends Shape {
     }
 }
 
+// 정사각형 추가
+class Square extends Rectangle {
+    Square(double side) {
+        super(side, side);
+    }
+}
+
 ```
 
-> 태그 달린 클래스의 모든 단점이 해결
+태그 달린 클래스의 모든 단점이 해결
