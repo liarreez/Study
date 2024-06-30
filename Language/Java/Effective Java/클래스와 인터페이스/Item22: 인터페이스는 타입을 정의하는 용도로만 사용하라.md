@@ -46,26 +46,27 @@ public class MyClass implements Constants {
  - 연관된 클래스와 인터페이스 자체에 추가(Integer.MAX_VALUE)
    ```java
    public class MyClass {
-    private static final String HELLO = "Hello";
-    private static final String WORLD = "World";
+       private static final String HELLO = "Hello";
+       private static final String WORLD = "World";
 
-    public void greet() {
-        System.out.println(HELLO + " " + WORLD);
-    }
-}
+       public void greet() {
+           System.out.println(HELLO + " " + WORLD);
+       }
+   }
    ```
  - 열거타입(enum) 사용
  - 인스턴스 할 수 없는 유틸리티 클래스 사용(Math.PI)
+   
    ```java
-public final class Constants {
-    public static final String HELLO = "Hello";
-    public static final String WORLD = "World";
+    public final class Constants {
+        public static final String HELLO = "Hello";
+        public static final String WORLD = "World";
 
-    // private 생성자로 인스턴스화 방지
-    private Constants() {
-        throw new AssertionError("Cannot instantiate constants class");
+        // private 생성자로 인스턴스화 방지
+        private Constants() {
+            throw new AssertionError("Cannot instantiate constants class");
+        }
     }
-}
    ```
 
 
