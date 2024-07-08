@@ -35,8 +35,8 @@
    * `Server Reflexive Address` : NAT 가 매핑한 클라이언트의 공인망(Public IP, Port), NAT 라우터 뒤에 있는 장치가 외부 네트워크와의 연결을 설정하는 데 사용
    * `Relayed Address` : TURN 서버에 연결하여 중계되는 IP 주소와 포트, 다른 모든 후보를 사용한 직접 연결이 실패할 경우 데이터를 TURN 서버를 통해 중계
    * ICE 후보는 일반적으로 Local Address, Server Reflexive Address, Relayed Address 순으로 선택
-   * `Trickle ICE` : 두 개의 피어가 ICE 후보를 수집하고 교환하는 과정을 병렬 프로세스로 수행할 수 있게 하는 기술
-   * NAT의 보안 이슈 등으로 최선의 ICE 후보를 찾지 못할 경우 폴백으로 세팅한 TURN 서버를 P2P 대용으로 설정
+ - `Trickle ICE` : 두 개의 피어가 ICE 후보를 수집하고 교환하는 과정을 병렬 프로세스로 수행할 수 있게 하는 기술
+ - NAT의 보안 이슈 등으로 최선의 ICE 후보를 찾지 못할 경우 폴백으로 세팅한 TURN 서버를 P2P 대용으로 설정
 
 > P2P 연결 설정 및 활성화, 각 피어에 의해 로컬 데이터 스트림의 엔드포인트가 생성되며, 이 데이터는 양방향 통신 기술을 사용하여 양방향으로 전송
 
